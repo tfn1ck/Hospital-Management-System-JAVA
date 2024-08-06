@@ -1,0 +1,74 @@
+create database hospital_management_system
+
+use hospital_management_system;
+
+create table login(id varchar(30), pw varchar(20));
+
+insert into login(id,pw) value("admin","12345");
+
+SELECT * FROM login;
+
+describe login;
+
+DROP TABLE login;
+
+create table patient_info(ID varchar(20), Number varchar(40), Gender varchar(20), Patient_Disease varchar(20), Room_Number varchar(20), Time varchar(100), Deposit varchar(20));
+
+create table room(room_no varchar(20), Avaibility varchar(20), Price varchar(20), Room_type varchar(20));
+
+insert into room values("100","Availabil","500","G Bed 1");
+insert into room values("101","Availabil","500","G Bed 2");
+insert into room values("102","Availabil","500","G Bed 3");
+insert into room values("103","Availabil","500","G Bed 4");
+insert into room values("200","Availabil","1500","Private Room");
+insert into room values("201","Availabil","1500","Private Room");
+insert into room values("202","Availabil","1500","Private Room");
+insert into room values("203","Availabil","1500","Private Room");
+insert into room values("300","Availabil","3500","ICU Bed 1");
+insert into room values("301","Availabil","3500","ICU Bed 2");
+insert into room values("302","Availabil","3500","ICU Bed 3");
+insert into room values("303","Availabil","3500","ICU Bed 4");
+insert into room values("304","Availabil","3500","ICU Bed 5");
+insert into room values("305","Availabil","3500","ICU Bed 6");
+
+drop table patient_info
+
+create table patient_info(ID varchar(20), Number varchar(40), Name varchar(20), Gender varchar(20), Patient_Disease varchar(20), Room_Number varchar(20), Time varchar(100), Deposit varchar(20));
+
+create table department(Department varchar(30),Phone_no varchar(20));
+
+insert into department values("Surgical Treatment","123456789");
+insert into department values("Nursing Treatment","123456789");
+insert into department values("Cancer Treatment","123456789");
+insert into department values("Emergency Treatment","123456789");
+insert into department values("Paramedical Treatment","123456789");
+insert into department values("OT","123456789");
+insert into department values("Therapy","123456789");
+
+create table Employee_info(Name varchar(20),Age varchar(10), Number varchar(20), Salary varchar(20), Email varchar(40), Aadhar_Number varchar(20), Position varchar(20));
+
+insert into Employee_info values("Dr.Mondal","58","1234567789","950000","abc@gmail.com","7497897","OT Specialist");
+insert into Employee_info values("Dr.Bale","60","1234566769","950000","abc@gmail.com","7894897","Doctor");
+insert into Employee_info values("Dr.Radheshyam","30","1214566789","800000","abc@gmail.com","4897897","Viral Specialist");
+insert into Employee_info values("Dr.Kashmiri","40","1234066789","1900000","abc@gmail.com","7597897","Bacterial Specialist");
+insert into Employee_info values("Dr.Raina","57","1234567789","600000","abc@gmail.com","7897847","Doctor");
+insert into Employee_info values("Dr.Modon","53","1234564789","700000","abc@gmail.com","7897857","Gynocologist");
+insert into Employee_info values("Dr.Gotephode","44","1204566789","950000","abc@gmail.com","2897897","Doctor");
+insert into Employee_info values("Rammu","67","1234566780","50000","abc@gmail.com","7897892","Peon");
+insert into Employee_info values("Chintu","41","1234566709","50000","abc@gmail.com","7897827","Clerk");
+insert into Employee_info values("Chandan","29","1234566089","50000","abc@gmail.com","7897297","Clerk");
+
+select * from Employee_info;
+
+select * from patient_info;
+
+select * from room;
+
+create table Ambulance(Name varchar(20), Gender varchar(20), Available varchar(20), Location varchar(20));
+
+insert into Ambulance values("Clerk_1","Male","YES","Andheri East");
+insert into Ambulance values("Clerk_2","Male","YES","Andheri West");
+insert into Ambulance values("Clerk_3","Male","YES","Khidirpur");
+insert into Ambulance values("Clerk_4","Female","YES","Sarojini nagar");
+insert into Ambulance values("Clerk_5","Female","YES","Marine Drive");
+insert into Ambulance values("LOL","LOL","NO TF :D","Chingrighata");
